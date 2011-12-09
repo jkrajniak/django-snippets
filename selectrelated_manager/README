@@ -6,7 +6,7 @@ from code import selectrelated_manager
 class ModelA(models.Model):
     hour = models.TimeField(blank=True, max_length=5, null=True)
     name = models.CharField(blank=True, max_length=128)
-    transfer_type = models.ForeignKey(ModelB, related_name='model')
+    type = models.ForeignKey(ModelB, related_name='model')
 
-    objects = selectrelated_manager(['transfer_type'])
+    objects = selectrelated_manager(['type'])
 
