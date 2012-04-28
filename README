@@ -1,2 +1,24 @@
 1. select_related manager
-2. showtime - template tag
+2.ShowTime template tag
+
+ Usage:
+   1. Define in settings dict TIME_BLOCK with names of block that has to be
+   shown on certain time:
+       TIME_BLOCK = {
+           'block1': {
+               'from_date': datetime.datetime(2012, 04, 28, 13, 48),
+               'to_date': datetime.datetime(2012, 04, 30, 13, 48),
+               'show': True
+           }
+       }
+   
+   2. In template use it in such way:
+       
+       {% showtime block1 %}
+           content that will be displayed between 2012-04-28 13:48 and 2012-04-30
+           13:48
+       {% else %}
+           content that will be displayed before and after that time
+       {% endshowtime %}
+
+  There is also the possibility to do it in the reverse way by using option 'show'.
