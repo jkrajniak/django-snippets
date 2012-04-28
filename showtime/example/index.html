@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load tags %}
+
+
+{% block content %}
+
+{% showtime block2 %}
+block2
+{% else %}
+dasda
+{% endshowtime %}
+
+{% showtime block1 %}
+ddd
+{% else %}
+dads
+{% endshowtime %}
+
+{% endblock %}
+
+{% block header %}
+
+{% showtime block2 %}
+b1 
+{% else %}
+b2
+{% endshowtime %}
+
+{% endblock %}
+
+
