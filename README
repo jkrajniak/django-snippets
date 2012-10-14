@@ -22,3 +22,5 @@
        {% endshowtime %}
 
   There is also the possibility to do it in the reverse way by using option 'show'.
+
+  3. logging_decorator
